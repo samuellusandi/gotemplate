@@ -19,7 +19,7 @@ func GetEnv(c *gin.Context) {
 			Endpoint:    c.Request.URL.String(),
 			RequestType: c.Request.Method,
 		})
-		c.Data(http.StatusInternalServerError, constants.ContentTypeJSON, errorResponse)
+		c.Data(http.StatusBadRequest, constants.ContentTypeJSON, errorResponse)
 		return
 	}
 
@@ -30,7 +30,7 @@ func GetEnv(c *gin.Context) {
 			Endpoint:    c.Request.URL.String(),
 			RequestType: c.Request.Method,
 		})
-		c.Data(http.StatusInternalServerError, constants.ContentTypeJSON, errorResponse)
+		c.Data(http.StatusBadRequest, constants.ContentTypeJSON, errorResponse)
 		return
 	}
 
@@ -42,7 +42,7 @@ func GetEnv(c *gin.Context) {
 	jsonResponse, err := utilities.CraftJSONResponse(response, c.Request.URL.String(), c.Request.Method)
 	var returnCode = http.StatusOK
 	if err != nil {
-		returnCode = http.StatusInternalServerError
+		returnCode = http.StatusBadRequest
 	}
 	c.Data(returnCode, constants.ContentTypeJSON, jsonResponse)
 }

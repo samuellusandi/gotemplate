@@ -1,7 +1,7 @@
 package env
 
 import (
-	r "template.clevecord.me/server/repository/env"
+	r "template.clevecord.me/server/repositories/env"
 )
 
 // LookupEnv tries to look up a value, putting the value inside the second parameter.

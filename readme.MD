@@ -4,7 +4,7 @@
 
 This is my personal template when creating a new Golang Project. It is highly opinionated, so please bear with me at how things are structured - as it may be (or is) highly unconventional.
 
-## How to run/build the code
+### How to run/build the code
 
 Simply run `go run server.go` as it is the entrypoint of the code itself. When you're ready to build the code, simply run `go build` and a binary executable will be created for you.
 
@@ -32,6 +32,7 @@ Here are the steps you might want to do to ensure the template is working as int
 }
 ```
 Congratulations! The server is running properly, and you're free to code!
+
 6. (Optional) Test out the `/env` route: simply access http://localhost:4000/api/env/APP_DESCRIPTION for example. It should output something along the lines of:
 ```json
 {

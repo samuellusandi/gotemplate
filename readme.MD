@@ -59,6 +59,7 @@ envController "template.clevecord.me/server/controllers/env"
 e.GET(APIPrefix+EnvPrefix+"/", envController.GetEnv)
 e.GET(APIPrefix+EnvPrefix+"/:env", envController.GetEnv)
 ```
+8. **IMPORTANT**! When you're done, you *should* change the `go.mod` module name to a suitable package name! Be sure to change any and all references to `template.clevecord.me` to your new package! This is important, don't forget this step!
 
 Happy coding!
 
